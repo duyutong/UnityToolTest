@@ -1,0 +1,6 @@
+{
+  "excelPath": "G:/study/DllStu/UnityToolTest/Assets/ConfigData/ExcelData",
+  "jsonPath": "G:/study/DllStu/UnityToolTest/Assets/ConfigData/JsonData",
+  "csharpPath": "G:/study/DllStu/UnityToolTest/Assets/ConfigData/CSharpClass",
+  "loaderPath": "G:/study/DllStu/UnityToolTest/Assets/ConfigData/ConfigLoader.cs"
+}

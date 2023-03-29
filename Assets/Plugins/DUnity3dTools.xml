@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DUnity3dTools</name>
+    </assembly>
+    <members>
+        <member name="T:D.Unity3dTools.BaseConfig">
+            <summary>
+            配置表基类
+            </summary>
+        </member>
+        <member name="P:D.Unity3dTools.BaseConfig.id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="T:D.Unity3dTools.ComponentEx">
+            <summary>
+            组件扩展类
+            </summary>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.ToSprite(UnityEngine.Texture2D)">
+            <summary>
+            将Texture2D转换成Sprite
+            </summary>
+            <param name="self"></param>
+            <returns></returns>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.AddTrggerEventListener(UnityEngine.EventSystems.EventTrigger,UnityEngine.EventSystems.EventTriggerType,System.Action{UnityEngine.EventSystems.PointerEventData})">
+            <summary>
+            通过代码添加EventTrigger事件（只能做unity已经定义的事件）
+            </summary>
+            <param name="trigger"></param>
+            <param name="eventID"></param>
+            <param name="call"></param>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.RemoveEventListener(UnityEngine.EventSystems.EventTrigger,UnityEngine.EventSystems.EventTriggerType)">
+            <summary>
+            通过代码删除EventTrigger事件（只能做unity已经定义的事件）
+            </summary>
+            <param name="trigger"></param>
+            <param name="eventID"></param>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.RemoveAllEventListener(UnityEngine.EventSystems.EventTrigger)">
+            <summary>
+            通过代码删除全部EventTrigger事件
+            </summary>
+            <param name="trigger"></param>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.Reset(UnityEngine.Transform)">
+            <summary>
+            重置Transform的本地尺寸，角度以及位置
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.GetPair``2(System.Collections.Generic.Dictionary{``0,``1},System.Int32)">
+            <summary>
+            获得字典的某一项
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dic"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:D.Unity3dTools.ComponentEx.AddOrReplace``2(System.Collections.Generic.Dictionary{``0,``1},``0,``1)">
+            <summary>
+            将键和值添加或替换到字典中
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="dic"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:D.Unity3dTools.EditorTool.CSTemplate">
+            <summary>
+            自动生成cs文件时使用的预制文字
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.CSTemplate.classStr">
+            <summary>
+            json生成的配置表类
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.CSTemplate.proStr">
+            <summary>
+            配置表类的属性部分
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.CSTemplate.classInitStr">
+            <summary>
+            配置表类的Init函数内容
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.CSTemplate.loaderClassStr">
+            <summary>
+            配置表加载类
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.CSTemplate.loaderMember">
+            <summary>
+            加载对应配置类方法的预置文字
+            </summary>
+        </member>
+        <member name="T:D.Unity3dTools.EditorTool.PathLibrary">
+            <summary>
+            配置文件地址
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.PathLibrary.excelPath">
+            <summary>
+            存放配置表的文件目录
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.PathLibrary.jsonPath">
+            <summary>
+            存放json的文件目录
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.PathLibrary.csharpPath">
+            <summary>
+            存放配置类的文件目录
+            </summary>
+        </member>
+        <member name="F:D.Unity3dTools.EditorTool.PathLibrary.loaderPath">
+            <summary>
+            配置加载类的地址（全名）
+            </summary>
+        </member>
+        <member name="T:D.Unity3dTools.HyperlinkInfo">
+            <summary>
+            超链接内容模块
+            </summary>
+        </member>
+        <member name="T:D.Unity3dTools.ParseUtil">
+            <summary>
+            遵守配置表规则前提下，用于类型转换的工具类
+            </summary>
+        </member>
+        <member name="M:D.Unity3dTools.ParseUtil.ToInt(System.Object)">
+            <summary>
+            将配置内容转换为整型
+            </summary>
+            <param name="self"></param>
+            <returns></returns>
+        </member>
+        <member name="M:D.Unity3dTools.ParseUtil.ToIntArray(System.Object)">
+            <summary>
+            将配置内容转换为整型列表
+            </summary>
+            <param name="self"></param>
+            <returns></returns>
+        </member>
+        <member name="M:D.Unity3dTools.ParseUtil.ToIntArrays(System.Object)">
+            <summary>
+            将配置内容转换为值为整型的二维列表
+            </summary>
+            <param name="self"></param>
+            <returns></returns>
+        </member>
+        <member name="M:D.Unity3dTools.ParseUtil.ToDictionary(System.Object)">
+            <summary>
+            讲配置内容转换为key和value都是整型的字典
+            </summary>
+            <param name="self"></param>
+            <returns></returns>
+        </member>
+        <member name="M:D.Unity3dTools.ParseUtil.GetMethodName(System.String)">
+            <summary>
+            转换数据类型时，按照配置的类型选择转换所需要调用的函数
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
